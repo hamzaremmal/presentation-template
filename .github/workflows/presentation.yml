@@ -14,8 +14,8 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
-      - name: Generate HTML presentation
-        run: make presentation.html
+      - name: Generate HTML & PDF presentation
+        run: make all
       - uses:  actions/upload-pages-artifact@v1
         with:
           path: "${{ github.workspace }}"

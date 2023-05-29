@@ -14,7 +14,6 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
-          cache: 'sbt'
       - name: Generate HTML presentation
         run: make presentation.html
       - uses:  actions/upload-pages-artifact@v1

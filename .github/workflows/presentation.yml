@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Generate HTML & PDF presentation
-        run: make all
+      - name: Generate HTML presentation
+        run: make presentation.html
       - uses:  actions/upload-pages-artifact@v1
         with:
           path: "${{ github.workspace }}"

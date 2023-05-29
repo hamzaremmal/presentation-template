@@ -1,6 +1,6 @@
 all: presentation.html presentation.pdf
 
-%.html: %.md Makefile custom.css
+%.html: %.md Makefile assets/style.css
 	docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex \
 		$< \
 		-t revealjs \
